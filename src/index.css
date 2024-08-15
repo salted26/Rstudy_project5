@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url('https://cdn.pixabay.com/photo/2021/01/22/18/09/windy-5940755_1280.png');
+  background-repeat: no-repeat;
+  background-size : cover;
 }
 
 code {
