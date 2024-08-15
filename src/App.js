@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import './App.css';
 import WeatherBox from './components/WeatherBox'
 import WeatherButton from './components/WeatherButton';
@@ -19,7 +19,7 @@ function App() {
   // spinners : true 사용 / false 미사용
   let [loading, setLoading] = useState(false);
 
-  const getCurrnetWeater = async(lat, lon) => {
+  const getCurrnetWeather = async(lat, lon) => {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=621e39132136a713226280563270d0a1`;
     setLoading(true);
     let response = await fetch(url);
@@ -28,14 +28,15 @@ function App() {
     setLoading(false);
   }
 
+  // eslint-disable-next-line
   const getCurrentLocation = () => {
-    navigator.geolocation.getCurrentPosition((position)=> {
+    navigator.geolocation.getCurrentPosition(position => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
 
-      getCurrnetWeater(lat, lon);
-    });
-  }
+      return getCurrnetWeather(lat, lon);
+    })
+  };
 
   const getWeatherCity = async() =>{
     if(city === 'current'){
@@ -44,7 +45,7 @@ function App() {
       let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=621e39132136a713226280563270d0a1`
       setLoading(true);
       let response = await fetch(url);
-      let data = await response.json()
+      let data = await response.json();
       setWeather(data);
       setLoading(false);
     }
@@ -54,10 +55,10 @@ function App() {
     if(city === '') {
       getCurrentLocation();
     } else {
-      getWeatherCity()
-    }
+      getWeatherCity();
+    }// eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [city]);
 
-  }, [city])
 
   return (
       <div className="App">
