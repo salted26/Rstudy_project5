@@ -1,11 +1,26 @@
-.App {
-  font-weight: bold;
-  align-items: center;
+.App{
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.weather-container {
+  background-color: #fff;
+  opacity: 0.7;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 700px;
 }
 
 .main_top{
-  padding: 2px;
   text-align: center;
 
   display: flex;
@@ -13,30 +28,24 @@
   justify-content: center;
   align-items: center;
 
-}
-
-.main_bottom{
-  padding: 20px;
-  text-align: center;
+  width: 70%;
 }
 
 .weather{
-  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 1000px;
-  height: 100px;
-
-  border: 1px solid gainsboro;
-  background-color:azure;
-  opacity: 0.5;
+  height: 10vh;
 }
 
-.tem {
+.main_bottom{
+  text-align: center;
+  width: 70%;
+}
+
+.temp {
   justify-content: center;
-  width: 500px;
+  margin: 1rem;
 }
 
 .button_group {
@@ -46,6 +55,11 @@
 
 .button_group > button {
   margin: 1rem;
+  font-weight: bold;
+}
+
+.button_group > button:hover {
+  border: 1px solid gray;
 }
 
 

@@ -62,12 +62,14 @@ function App() {
 
   return (
       <div className="App">
-        {!loading?
-            ( <>
-              <WeatherBox weather={weather}/>
-              <WeatherButton cities={cities} setCity={setCity} />
-            </>) : (<ClipLoader color='#ffffff' loading={loading} size={150} aria-label="Loading Spinner" data-testid="loader" />)
-        }
+        <div className="weather-container">
+          {!loading?
+              ( <>
+                <WeatherBox weather={weather}/>
+                <WeatherButton cities={cities} setCity={setCity} />
+              </>) : (<ClipLoader color='#ffffff' loading={loading} size={150} aria-label="Loading Spinner" data-testid="loader" />)
+          }
+        </div>
       </div>
   );
 }

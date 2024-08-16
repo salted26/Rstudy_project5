@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url('https://cdn.pixabay.com/photo/2021/01/22/18/09/windy-5940755_1280.png');
+  min-height: 10vh;
+
+  background-image: url('https://cdn.pixabay.com/photo/2020/12/20/04/06/bear-5846065_1280.jpg');
   background-repeat: no-repeat;
   background-size : cover;
 }
