@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import WeatherBox from './components/WeatherBox'
 import WeatherButton from './components/WeatherButton';
-import ClipLoader from "react-spinners/ClipLoader";
+import CircleLoader  from "react-spinners/CircleLoader";
 
 // 1. 실행 : 현재 있는 장소의 날씨가 보인다.
 // 2. 날씨 정보 : 도시, 섭씨, 화씨, 날씨상태
@@ -67,7 +67,8 @@ function App() {
               ( <>
                 <WeatherBox weather={weather}/>
                 <WeatherButton cities={cities} setCity={setCity} />
-              </>) : (<ClipLoader color='#ffffff' loading={loading} size={150} aria-label="Loading Spinner" data-testid="loader" />)
+              </>) : (<CircleLoader  color='#ccc' loading={loading} size={50} speedMultiplier={2}
+                                    aria-label="Loading Spinner" data-testid="loader" />)
           }
         </div>
       </div>

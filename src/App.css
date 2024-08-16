@@ -19,15 +19,17 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 60vw;
+  min-width: 30vw;
   min-height: 30vh;
 }
 
 .main_top{
   text-align: center;
 
-  min-width: 50vw;
-  margin-bottom: 2.5rem;
+  min-width: 30vw;
+  min-height: 3vh;
+  margin-bottom: 1.5rem;
+
 }
 
 .temp_info {
@@ -43,13 +45,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 8vh;
+  min-height: 4vh;
 
   width: 100%;
 }
 
 .main_bottom{
-  margin-top: 2rem;
+  min-width: 4vw;
 }
 
 .temp-container {
@@ -63,7 +65,7 @@
 
 .city {
   display: flex;
-  min-height: 1vh;
+  min-height: 0.5vh;
 }
 
 .button_group {
@@ -72,7 +74,7 @@
 }
 
 .button_group > button {
-  margin: 1rem;
+  margin: 0 2rem 2rem 2rem;
   font-weight: bold;
 }
 
