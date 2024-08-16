@@ -16,24 +16,25 @@ export default function Weather({ weather }) {
         }
     }
 
-    const getTempSub = () => {
-        if(weather === undefined || weather === null) {
-            return null;
-        } else {
-            setTempC((weather.main.temp).toString());
-            setTempF(((weather.main.temp * 9/5) + 32).toString());
 
-            if(tempC.length > 5) {
-                setTempC(tempC.substring(0, 5));
-            } else if (tempF.length > 5) {
-                setTempF(tempF.substring(0, 5));
-            }
-        }
-    }
 
     useEffect(() => {
+        const getTempSub = () => {
+            if(weather === undefined || weather === null) {
+                return null;
+            } else {
+                setTempC((weather.main.temp).toString());
+                setTempF(((weather.main.temp * 9/5) + 32).toString());
+
+                if(tempC.length > 5) {
+                    setTempC(tempC.substring(0, 5));
+                } else if (tempF.length > 5) {
+                    setTempF(tempF.substring(0, 5));
+                }
+            }
+        }
         getTempSub();
-    }, []);
+    }, [tempC, tempF, weather]);
 
         return (
         <div className='main_top'>
