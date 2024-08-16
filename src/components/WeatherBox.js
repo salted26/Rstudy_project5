@@ -35,7 +35,7 @@ export default function Weather({ weather }) {
                     </div>
                 </div>
                 <div className='city'>
-                    <h4>{weather && weather.name}<br />
+                    <h4>{weather && weather.name}
                     &nbsp;&nbsp;/&nbsp;&nbsp;{weather?.weather[0].main}({weather?.weather[0].description})</h4>
                 </div>
             </div>
