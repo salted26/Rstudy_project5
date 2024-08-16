@@ -12,40 +12,58 @@
   opacity: 0.7;
   font-weight: bold;
 
+  border-radius: 2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 700px;
+  min-width: 60vw;
+  min-height: 30vh;
 }
 
 .main_top{
   text-align: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-width: 50vw;
+  margin-bottom: 2.5rem;
+}
 
-  width: 70%;
+.temp_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
 }
 
 .weather{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
+
+  width: 100%;
 }
 
 .main_bottom{
-  text-align: center;
-  width: 70%;
+  margin-top: 2rem;
+}
+
+.temp-container {
+  display: flex;
 }
 
 .temp {
   justify-content: center;
   margin: 1rem;
+}
+
+.city {
+  display: flex;
+  min-height: 1vh;
 }
 
 .button_group {
