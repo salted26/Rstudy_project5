@@ -1,25 +1,12 @@
 import React from 'react'
 
-export default function Weather({ weather }) {
-
-    const weatherIcon = () =>{
-        if(weather !== undefined || weather !== '') {
-            let url = `https://openweathermap.org/img/wn/${weather?.weather[0].icon}@2x.png`
-            return (
-                <img alt="weather icon" src={url} style={{width:125}}/>
-            )
-        } else {
-            return null;
-        }
-    }
-
-
+export default function Weather({ weather, weatherIcon }) {
     return (
         <div className='main_top'>
             <div className='weather'>
                 <div className='temp_info'>
                     <div className="weather-icon">
-                        {weatherIcon()}
+                        { weatherIcon }
                     </div>
                     <div className="temp-container">
                         <div className='temp'>
