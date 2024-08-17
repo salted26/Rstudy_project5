@@ -70,11 +70,15 @@
 .city {
   display: flex;
   min-width: 20vw;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .button_group {
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem
 }
 
 .button_group > button {
