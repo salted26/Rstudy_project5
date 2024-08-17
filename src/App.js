@@ -15,7 +15,7 @@ function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
 
   const [ weather, setWeather ] = useState();
-  const cities = [ 'paris', 'jeju', 'sydney', 'hawaii', 'current'];
+  const cities = [ 'paris', 'rome', 'sydney', 'hawaii', 'current'];
   const [city, setCity] = useState('');
   const [ selected, setSelected] = useState('');
   const [ apiError, setApiError ] = useState('');
@@ -76,7 +76,9 @@ function App() {
               <img alt="weather icon" src={url} style={{width:125}}/>
           )
       } else {
-          return null;
+          return (
+              <div>이미지가 없습니다.</div>
+          )
       }
     } catch(error){
       setApiError(error.message);
